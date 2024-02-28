@@ -16,9 +16,25 @@ export default function Notifications()
       body: content,
       android: {
         channelId,
-        pressAction: {
-          id: 'default',
-        },
+        actions: [
+          {
+            title:'Fechar',
+            pressAction:{
+              id:'close'
+            },
+          },
+          {
+            title:'Digite algo',
+            pressAction:{
+              id:'reply'
+            },
+            input: {
+              allowFreeFormInput: false, // set to false
+              choices: ['Yes', 'No', 'Maybe'],
+              placeholder: 'Reply to Sarah...',
+            }
+          }
+        ]
       },
     });
   }

@@ -31,7 +31,7 @@ export default function Notifications()
             input: {
               allowFreeFormInput: false, // set to false
               choices: ['Yes', 'No', 'Maybe'],
-              placeholder: 'Reply to Sarah...',
+              placeholder: 'Responda...',
             }
           }
         ]
